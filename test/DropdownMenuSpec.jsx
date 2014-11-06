@@ -9,8 +9,8 @@ describe('DropdownMenu', function () {
   it('Should render menu correctly', function () {
     var instance = ReactTestUtils.renderIntoDocument(
       <DropdownMenu>
-        <MenuItem selectKey="1" ref="item1">MenuItem 1 content</MenuItem>
-        <MenuItem selectKey="2" ref="item2">MenuItem 2 content</MenuItem>
+        <MenuItem ref="item1">MenuItem 1 content</MenuItem>
+        <MenuItem ref="item2">MenuItem 2 content</MenuItem>
       </DropdownMenu>
     );
 
@@ -29,7 +29,7 @@ describe('DropdownMenu', function () {
   it('Should pass props to dropdown', function () {
     var instance = ReactTestUtils.renderIntoDocument(
       <DropdownMenu className="new-fancy-class">
-        <MenuItem selectKey="1">MenuItem 1 content</MenuItem>
+        <MenuItem>MenuItem 1 content</MenuItem>
       </DropdownMenu>
     );
 
@@ -89,8 +89,8 @@ describe('DropdownMenu', function () {
 
     var instance = ReactTestUtils.renderIntoDocument(
       <DropdownMenu>
-        <MenuItem selectKey={1}>MenuItem 1 content</MenuItem>
-        <MenuItem selectKey={2} href="javascript:window.__someGlobalTestCallback();">MenuItem 2 content</MenuItem>
+        <MenuItem>MenuItem 1 content</MenuItem>
+        <MenuItem href="javascript:window.__someGlobalTestCallback();">MenuItem 2 content</MenuItem>
       </DropdownMenu>
     );
 
